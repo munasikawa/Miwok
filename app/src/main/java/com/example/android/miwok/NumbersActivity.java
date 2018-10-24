@@ -16,16 +16,16 @@ public class NumbersActivity extends AppCompatActivity {
         // Create ArrayList of English Words
 
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("two", "otiiko"));
-        words.add(new Word("three", "tolookosu"));
-        words.add(new Word("four", "oyyisa"));
-        words.add(new Word("five", "massokka"));
-        words.add(new Word("six", "temmokka"));
-        words.add(new Word("seven", "kenekaku"));
-        words.add(new Word("eight", "kawinta"));
-        words.add(new Word("nine", "wo'e"));
-        words.add(new Word("ten", "na'aacha"));
+        words.add(new Word("one", "lutti", R.mipmap.ic_launcher));
+        words.add(new Word("two", "otiiko", R.mipmap.ic_launcher));
+        words.add(new Word("three", "tolookosu", R.mipmap.ic_launcher));
+        words.add(new Word("four", "oyyisa", R.mipmap.ic_launcher));
+        words.add(new Word("five", "massokka", R.mipmap.ic_launcher));
+        words.add(new Word("six", "temmokka", R.mipmap.ic_launcher));
+        words.add(new Word("seven", "kenekaku", R.mipmap.ic_launcher));
+        words.add(new Word("eight", "kawinta", R.mipmap.ic_launcher));
+        words.add(new Word("nine", "wo'e", R.mipmap.ic_launcher));
+        words.add(new Word("ten", "na'aacha", R.mipmap.ic_launcher));
 
         // Create an (@link ArrayAdapter), whose data source is a list of Strings. The
         //adapter knows how to create Layouts for each item in the list, using the
