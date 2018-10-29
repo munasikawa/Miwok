@@ -12,18 +12,44 @@ public class Word {
     // miwok translation of the word
     private String mMiwokTranslation;
 
+    /** Audio resource ID for the word */
+    private int mAudioResourceId;
+
     // Drawable resource ID
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
 
-    // creates a word object
-    // @param defaultTranslation is the word in a language that the user is already
-    // familiar with (such as English)
-    // @param miwokTranslation is the word in the miwok language
+    /** Constant value that represents no image was provided for this word */
+    private static final int NO_IMAGE_PROVIDED = 0;
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+    /**
+     * Create a new Word object.
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with
+     *                           (such as English)
+     * @param miwokTranslation is the word in the Miwok language
+     * @param audioResourceId is the resource ID for the audio file associated with this word
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
+    }
+
+    /**
+            * Create a new Word object.
+            *
+            * @param defaultTranslation is the word in a language that the user is already familiar with
+     *                           (such as English)
+            * @param miwokTranslation is the word in the Miwok language
+     * @param imageResourceId is the drawable resource ID for the image associated with the word
+     * @param audioResourceId is the resource ID for the audio file associated with this word
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId,
+                int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     // get a default translation of the word
@@ -39,6 +65,20 @@ public class Word {
     //Get the image resource ID
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    /**
+     * Returns whether or not there is an image for this word.
+     */
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+    /**
+     * Return the audio resource ID of the word.
+     */
+    public int getAudioResourceId() {
+        return mAudioResourceId;
     }
 }
 
